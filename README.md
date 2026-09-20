@@ -18,6 +18,39 @@
 
 ---
 
+## 🚀 Quickstart (1-Click Run for Anyone)
+
+Anyone who clones this GitHub repository can start the application instantly:
+
+### 🪟 Windows (1-Click)
+Double-click **`run.bat`** in the project root.
+*(It automatically checks/installs dependencies, launches both servers, and opens the app in your browser!)*
+
+### 🍎 macOS / 🐧 Linux (1-Click)
+Run the launcher script:
+```bash
+./run.sh
+```
+
+---
+
+## 💻 Manual Setup & Commands
+
+If you prefer using terminal commands:
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Start Application (Both Engine & UI)
+```bash
+npm start
+```
+*Opens both backend and frontend concurrently at `http://localhost:3000`.*
+
+---
+
 ## 🛠️ How It Works
 
 ```text
@@ -42,16 +75,6 @@ Answer + Source Document Citations
 
 ---
 
-## 🚀 Tech Stack
-
-- **Frontend**: React 18, Vite, TypeScript, Tailwind CSS, Lucide Icons
-- **PDF Extraction**: `pdfjs-dist`
-- **Local AI Engine**: `@qvac/sdk` (**Version: 0.19.1**)
-- **Local Server Bridge**: Express / Node.js
-- **Persistence**: Local Storage & IndexedDB
-
----
-
 ## 📦 Installed QVAC Version
 
 This project uses **`@qvac/sdk` version `0.19.1`** (declared in `package.json`).
@@ -62,56 +85,6 @@ The application invokes official QVAC SDK functions directly:
 - `ragSearch()`
 - `completion()`
 - `unloadModel()`
-
----
-
-## 💻 Installation & Setup
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) version 18 or newer
-- `npm` or `pnpm` package manager
-
-### Step 1: Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-## 🏃 Running the Application
-
-### 1. Start the Local QVAC Engine Server
-
-In your first terminal window, start the local QVAC backend bridge:
-
-```bash
-npm run server
-```
-
-The QVAC local server will listen at `http://localhost:3001`.
-
-### 2. Start the Frontend Development Server
-
-In a second terminal window, start the Vite development server:
-
-```bash
-npm run dev
-```
-
-Open your browser and navigate to `http://localhost:3000`.
-
----
-
-## 🧪 Testing with the Built-in Demo
-
-1. Click **"Try Demo (Physics Notes)"** in the left sidebar or landing page.
-2. The app will ingest `demo-physics-notes.txt` locally using QVAC `ragIngest()`.
-3. Type a sample question in the chat:
-   - *"What is Gauss's law?"*
-   - *"What is electric flux?"*
-4. QVAC `ragSearch()` retrieves the exact matching physics notes context and generates a local response with source citations.
 
 ---
 
