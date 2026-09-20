@@ -1,7 +1,8 @@
 import * as pdfjsLib from 'pdfjs-dist';
+// Import pdfjs worker URL via Vite URL import for 100% offline support on any PC
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.mjs?url';
 
-// Set up pdf.js worker URL
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 export interface ExtractedDocument {
   text: string;
@@ -15,7 +16,6 @@ export async function extractTextFromFile(file: File): Promise<ExtractedDocument
     return await extractTextFromPDF(file);
   } else if (fileType === 'txt' || fileType === 'md') {
     const text = await file.text();
-    // Estimate page count for text file (~2500 chars per page)
     const pageCount = Math.max(1, Math.ceil(text.length / 2500));
     return { text, pageCount };
   } else {
