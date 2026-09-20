@@ -1,0 +1,24 @@
+Physics Quick Notes — Fundamentals of Electromagnetism & Field Theory
+
+1. Electric Flux and Gauss's Law
+- Definition: Electric flux (denoted by Φ_E) is the measure of the electric field passing through a given surface. Mathematically, for a uniform electric field E passing through a surface vector A, Electric Flux is given by Φ_E = E · A = E A cos(θ).
+- Gauss's Law: Gauss's law states that the total electric flux through any closed surface (known as a Gaussian surface) is equal to the net electric charge enclosed within that surface divided by the permittivity of free space (ε_0).
+- Mathematical Statement: ∮ E · dA = Q_enclosed / ε_0.
+- Applications of Gauss's Law:
+  1. Field due to an infinitely long straight wire with linear charge density λ: E = λ / (2 π ε_0 r).
+  2. Field due to a uniformly charged infinite plane sheet with surface charge density σ: E = σ / (2 ε_0).
+  3. Field outside a spherical conducting shell of radius R carrying charge Q: E = Q / (4 π ε_0 r^2) for r ≥ R. Inside the conducting shell (r < R), the electric field E is zero because Q_enclosed = 0.
+
+2. Coulomb's Law and Electric Forces
+- Coulomb's Law describes the electrostatic force F between two stationary point charges q1 and q2 separated by distance r in a vacuum: F = k_e * |q1 * q2| / r^2, where Coulomb's constant k_e = 1 / (4 π ε_0) ≈ 8.99 × 10^9 N·m^2/C^2.
+- Vector Form: Electric force is conservative, attractive between opposite charges, and repulsive between like charges.
+
+3. Electric Potential and Potential Energy
+- Electric Potential V at a distance r from a point charge q is V = k_e * q / r.
+- Relationship to Field: The electric field E is equal to the negative gradient of the electric potential: E = -∇V.
+- Work Done: The work W done by an external force to move charge q from potential V_initial to V_final is W = q * ΔV.
+
+4. Capacitance and Energy Storage
+- Capacitance C is defined as the ratio of stored charge Q to potential difference V: C = Q / V.
+- Parallel Plate Capacitor: C = (ε_0 * A) / d, where A is plate area and d is plate separation.
+- Energy Stored in a Capacitor: U = (1/2) * C * V^2 = (1/2) * Q^2 / C.
