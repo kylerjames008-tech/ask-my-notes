@@ -98,4 +98,4 @@ The application invokes official QVAC SDK functions directly:
 
 ## 📄 License
 
-Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
+Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for details...
